@@ -255,6 +255,6 @@ def pdf_types(file_names):
 
 if __name__ == "__main__":
     create_upload_folder()
-    # app.run(host='10.42.49.111',port=80)
+    app.run(port=5000)
     # app.run(host='0.0.0.0', debug=app.config['DEBUG'])
-    serve(app, host='0.0.0.0', port=5000)
+    # serve(app, host='0.0.0.0', port=5000)
