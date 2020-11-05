@@ -19,8 +19,17 @@ In this project, we build a demo web base on Flask for eDocument with some featu
 2. ElasticSearch :  
     - Install ElasticSearch :[Vietnamese Tutorial](https://stackjava.com/elasticsearch/huong-dan-cai-dat-elasticsearch-tren-ubuntu-16-04.html)
 or [ElasticSearch install guide](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)  
-    - After install <b>make sure elastic search run on port 9200</b>
-
+    - After install <b>make sure elastic search run on port 9200</b>  
+2.1 config ElasticSearch for searching( cors errros fix):  
+Find where elasticsearch.yml : ubuntu(/etc/elasticsearch/elasticsearch.yml )  
+then append:
+```
+http.cors.enabled : true
+http.cors.allow-origin: "*"
+http.cors.allow-methods: OPTIONS, HEAD, GET, POST, PUT, DELETE
+http.cors.allow-headers: X-Requested-With,X-Auth-Token,Content-Type,Content-Length
+http.cors.allow-credentials: true
+```
 3. Install some requirement packages :  
     - We recommend use a virtual environment  
     - Then : pip install -r requirements  
